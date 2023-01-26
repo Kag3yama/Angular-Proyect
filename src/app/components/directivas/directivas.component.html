@@ -1,0 +1,6 @@
+<h3>Lista de alumnos</h3>
+<ul>
+  <li *ngFor="let estudiante of listaEstudiantes" [ngClass]="estudiante.estaActivo ? 'activo': 'inactivo'">
+    {{ estudiante.nombre }}
+  </li>
+</ul>

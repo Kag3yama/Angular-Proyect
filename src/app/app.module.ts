@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { StudentsComponent } from './components/students/students.component';
+import { DirectivasComponent } from './components/directivas/directivas.component';
+import { DirectivaPersonalizadaDirective } from './directives/directiva-personalizada.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ToolbarComponent,
-    StudentsComponent
+    StudentsComponent,
+    DirectivasComponent,
+    DirectivaPersonalizadaDirective
   ],
   imports: [
     BrowserModule
