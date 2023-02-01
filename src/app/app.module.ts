@@ -9,6 +9,9 @@ import { DirectivasComponent } from './components/directivas/directivas.componen
 import { DirectivaPersonalizadaDirective } from './directives/directiva-personalizada.directive';
 import { FormularioReactivoComponent } from './components/formulario-reactivo/formulario-reactivo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialComponent } from './components/material/material.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     StudentsComponent,
     DirectivasComponent,
     DirectivaPersonalizadaDirective,
-    FormularioReactivoComponent
+    FormularioReactivoComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
