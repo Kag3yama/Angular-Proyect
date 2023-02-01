@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from './components/material/material.component';
 import { MaterialModule } from './material.module';
+import { EditarCursoDialogComponent } from './components/editar-curso-dialog/editar-curso-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { MaterialModule } from './material.module';
     DirectivasComponent,
     DirectivaPersonalizadaDirective,
     FormularioReactivoComponent,
-    MaterialComponent
+    MaterialComponent,
+    EditarCursoDialogComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   
   providers: [],

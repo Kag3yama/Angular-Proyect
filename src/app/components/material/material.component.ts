@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Curso } from '../../models/curso';
+import { MatDialog } from '@angular/material/dialog';
+import { EditarCursoDialogComponent } from '../editar-curso-dialog/editar-curso-dialog.component';
 
 @Component({
   selector: 'app-material',
@@ -16,4 +18,16 @@ export class MaterialComponent {
   ];
   dataSource: MatTableDataSource<Curso> = new MatTableDataSource<Curso>(this.cursos)
   columnas: string [] = ['nombre', 'comision', 'profesor', 'acciones']
+
+  constructor(
+    private dialog: MatDialog
+  ){
+
+  }
+
+  abrirModal(curso: Curso){
+    const dialogRef = this.dialog.open(EditarCursoDialogComponent, {
+      data: curso
+    });
+  }
 }
