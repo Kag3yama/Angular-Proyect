@@ -13,66 +13,26 @@ export class MaterialComponent {
   filtro: string = '';
   cursos: Curso[] = [
     {
-      nombre: 'Angular', 
-      comision: '49533', 
-      profesor: {
-        nombre: 'Abner',
-        correo: 'abner@gmail.com',
-        fechaRegistro: new Date(2022, 2, 15)
-      },
-      fechaInicio: new Date(2023, 0, 1, 20, 30, 0),
-      fechaFin: new Date(2023, 0, 31, 20, 30, 0),
-      inscripcionAbierta: true
+      nombre: 'Matias Cortes', 
+      email: 'matiascortes@gmail.com',
+      years: 29
     },
     {
-      nombre: 'Vue', 
-      comision: '42523', 
-      profesor: {
-        nombre: 'Lucas',
-        correo: 'lucas@gmail.com',
-        fechaRegistro: new Date(2022, 2, 15)
-      },
-      fechaInicio: new Date(2023, 1, 1, 20, 30, 0),
-      fechaFin: new Date(2023, 1, 31, 20, 30, 0),
-      inscripcionAbierta: false
+      nombre: 'Romina Montenegro', 
+      email: 'rominamontenegro@gmail.com',
+      years: 26,
     },
     {
-      nombre: 'NodeJS', 
-      comision: '42433', 
-      profesor: {
-        nombre: 'Tristan',
-        correo: 'tristan@gmail.com',
-        fechaRegistro: new Date(2022, 2, 15)
-      },
-      fechaInicio: new Date(2023, 2, 1, 20, 30, 0),
-      fechaFin: new Date(2023, 2, 31, 20, 30, 0),
-      inscripcionAbierta: true
+      nombre: 'Agustina Garcia Da Rosa', 
+      email: 'agustinagarcia@gmail.com',
+      years: 19
     },
     {
-      nombre: 'React', 
-      comision: '49536', 
-      profesor: {
-        nombre: 'Freddy',
-        correo: 'freddy@gmail.com',
-        fechaRegistro: new Date(2022, 2, 15)
-      },
-      fechaInicio: new Date(2023, 3, 1, 20, 30, 0),
-      fechaFin: new Date(2023, 3, 31, 20, 30, 0),
-      inscripcionAbierta: false
+      nombre: 'Matias Olivieri', 
+      email: 'matiasolivieri@gmail.com',
+      years: 23
     }
   ];
   dataSource: MatTableDataSource<Curso> = new MatTableDataSource<Curso>(this.cursos);
-  columnas: string[] = ['nombre', 'comision', 'profesor', 'fechaInicio', 'fechaFin', 'inscripcionAbierta', 'acciones'];
-
-  constructor(
-    private dialog: MatDialog
-  ){
-
-  }
-
-  abrirModal(curso: Curso){
-    const dialogRef = this.dialog.open(EditarCursoDialogComponent, {
-      data: curso
-    });
-  }
+  columnas: string[] = ['nombre', 'email', 'years', 'acciones'];
 }

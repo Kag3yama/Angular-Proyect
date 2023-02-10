@@ -17,8 +17,8 @@ export class EditarCursoDialogComponent {
   ){
     this.formulario = new FormGroup({
       nombre: new FormControl(data.nombre),
-      comision: new FormControl(data.comision),
-      profesor: new FormControl(data.profesor)
+      email: new FormControl(data.email),
+      years: new FormControl(data.years)
     })
   }
 }
